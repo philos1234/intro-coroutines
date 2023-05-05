@@ -77,6 +77,8 @@ interface Contributors: CoroutineScope {
                     val users = loadContributorsSuspend(service, req)
                     updateResults(users, startTime)
                 }.setUpCancellation()
+
+
             }
             CONCURRENT -> { // Performing requests concurrently
                 launch {
