@@ -20,4 +20,5 @@ fun main() = runBlocking<Unit> {
             log(x)
         }
     }
+    val go = "gio"
 }
