@@ -16,10 +16,10 @@ suspend fun loadContributorsProgress(
         service.getRepoContributors(req.org, repo.name)
             .also { logUsers(repo, it) }
             .bodyList()
-            .let {user ->
+            .let { user ->
                 users = user.plus(users)
                 users = users.aggregate()
             }
-          updateResults.invoke(users, false)
+        updateResults.invoke(users, false)
     }
 }
